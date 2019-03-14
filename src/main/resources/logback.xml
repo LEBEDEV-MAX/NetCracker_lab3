@@ -1,0 +1,21 @@
+<configuration sacn="true">
+
+    <appender name="consApp" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="info">
+        <appender-ref ref="consApp" />
+    </root>
+
+    <appender name="fileApp" class="ch.qos.logback.core.FileAppender">
+        <file>log.txt</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="info">
+        <appender-ref ref="fileApp" />
+    </root>
+</configuration>
